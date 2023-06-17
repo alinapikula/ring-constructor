@@ -5,12 +5,12 @@ function Droppablebox() {
  
   return (
      <DragDropContext>
-    <div className="droppable">
-    <div className="main__drop-rows">
+    <div className="drop">
+    <div className="drop__rows">
             <Droppable droppableId="container">
               {(provided)=>(
                 <div {...provided.droppableProps} ref={provided.innerRef}>
-            <div className="main__drop-container">{provided.placeholder}</div>
+            <div className="drop__container">{provided.placeholder}</div>
             {provided.placeholder}
             </div>
             )}
@@ -18,8 +18,8 @@ function Droppablebox() {
             {/* <div className="main__drop-container"></div>
             <div className="main__drop-container"></div> */}
 
-            <button className="main__btn main__drop-btn">GENERATE</button>
-            <button className="main__btn main__drop-btn">RANDOM</button>
+            <button className="drop__btn drop__btn-gen">GENERATE</button>
+            <button className="drop__btn drop__btn-rand">RANDOM</button>
         </div>
     </div>
      </DragDropContext>
