@@ -1,0 +1,38 @@
+// nutral colors 
+$black: #323232;
+$silver: #AFAFAF;
+$white: #FFFFFF;
+$dark-black: #000000;
+$mercury: #E1E1E1;
+$alabaser: #FAFAFA;
+$bege: #FBF7F7;
+
+// primary collors
+$primary-1: #3E2E3C;
+$primary-2: #EDE7E4;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.main{
+        &__result {
+                width: 100%;
+                background-color: $primary-2;
+        
+            }
+        
+        
+            &__btn {
+                background-color: $primary-1;
+                color: $bege;
+                border: none;
+        
+                padding: 0.5rem;
+                border-radius: 10px;
+                height: 2.5rem;
+                margin-bottom: 2rem;
+            }
+}

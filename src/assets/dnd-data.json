@@ -1,0 +1,42 @@
+[
+    {"name":"row1",
+      "id": "1",
+      "img":"./rows-dnd/row1.png"
+    },
+    
+    {"name":"row2",
+      "id": "2",
+      "img":"./rows-dnd/row2.png"
+    },
+    
+    {"name":"row3",
+      "id": "3",
+      "img":"./rows-dnd/row3.png"
+    },
+    
+    {"name":"row4",
+      "id": "4",
+      "img":"./rows-dnd/row4.png"
+    },
+    
+    {"name":"row5",
+      "id": "5",
+      "img":"./rows-dnd/row5.png"
+    },
+    
+    {"name":"row6",
+      "id": "6",
+      "img":"./rows-dnd/row6.png"
+    },
+    
+    {"name":"row7",
+      "id": "7",
+      "img":"./rows-dnd/row7.png"
+    },
+    
+    {"name":"row8",
+      "id": "8",
+      "img":"./rows-dnd/row8.png"
+    }
+    
+]

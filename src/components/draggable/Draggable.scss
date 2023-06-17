@@ -1,0 +1,62 @@
+// nutral colors 
+$black: #323232;
+$silver: #AFAFAF;
+$white: #FFFFFF;
+$dark-black: #000000;
+$mercury: #E1E1E1;
+$alabaser: #FAFAFA;
+$bege: #FBF7F7;
+
+// primary collors
+$primary-1: #3E2E3C;
+$primary-2: #EDE7E4;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.main {
+    // height: calc(100vh - 5rem);
+    // background-color: $bege;
+    // display: flex;
+    // justify-content: space-around;
+
+    &__choose-rows {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        background-color: $primary-2;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        // place-content: center;
+
+    }
+
+    &__choose-title {
+        text-align: center;
+
+        margin: 1rem;
+        margin-top: 2rem;
+        font-size: 1.25rem;
+    }
+
+    &__choose-devider {
+        margin: 1rem auto;
+        height: 3px;
+        width: 90%;
+
+        background-color: $primary-1;
+    }
+}
+
+.row-img{
+    width: 250px;
+}
+
+.drg-ul{
+    list-style: none;
+}
