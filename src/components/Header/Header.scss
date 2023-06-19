@@ -15,12 +15,15 @@
     display: flex;
     border-bottom: #EF9002 5px solid;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     &__logo{
+        margin-left: 140%;
         height: 3.5rem;
     }
     &__nav{
+        width: 15rem;
+        margin-right: 2rem;
         display: flex;
         color: #E1E1E1;
         justify-content: space-around;

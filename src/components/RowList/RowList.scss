@@ -1,0 +1,33 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.row-list{
+    border-radius: 20px;
+    height: 45rem;
+    background-color: $primary-2;
+    &__title{
+       
+        padding-top: 1rem;
+        text-align: center;
+    }
+    &__list{
+        
+        width: 30rem;
+
+    }
+    &__row{
+        text-align: center;
+        padding: 2rem;
+        
+    }
+    &__row-img{
+        border-radius: 15px;
+        width: 25rem;
+
+    }
+}

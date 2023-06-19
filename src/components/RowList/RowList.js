@@ -1,0 +1,56 @@
+import { Component } from "react";
+import React from "react";
+import "./RowList.scss"
+import CustomScroller from "react-custom-scroller";
+import {  Draggable } from "react-beautiful-dnd";
+import { StrictModeDroppable as Droppable } from "../../helpers/StrictModeDroppable";
+import { ITEMS } from "../../assets/initData";
+
+export const RowList = () => {
+
+  // export class CustomScrollBar extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     items: getItems(100)
+  //   };
+  //   this.onDragEnd = this.onDragEnd.bind(this);
+  // }}
+
+  return (
+    <CustomScroller className="row-list">
+    <div className="row-list">
+      <h1 className="row-list__title">Drag your rows</h1>
+      <Droppable droppableId="ITEMS" isDropDisabled={true}>
+        {(provided, snapshot) => (
+          <ul className="row-list__list"
+            ref={provided.innerRef}
+            isDraggingOver={snapshot.isDraggingOver}
+          >
+            
+            {ITEMS.map((item, index) => (
+              <Draggable key={item.id} draggableId={item.id} index={index}>
+                {(provided, snapshot) => (
+                  <React.Fragment>
+                    <div className="row-list__row"
+                      ref={provided.innerRef}
+                      {...provided.draggableProps}
+                      {...provided.dragHandleProps}
+                      isDragging={snapshot.isDragging}
+                      style={provided.draggableProps.style}
+                    >
+                     <img className="row-list__row-img" src={item.content}/> 
+                    </div>
+                    {snapshot.isDragging && <img className="row-list__row-img" src={item.content}/>}
+                  </React.Fragment>
+                )}
+              </Draggable>
+            ))}
+            {provided.placeholder}
+          </ul>
+        )}
+      </Droppable>
+    </div>
+    </CustomScroller>
+  );
+};

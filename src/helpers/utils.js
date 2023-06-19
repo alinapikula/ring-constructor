@@ -1,4 +1,4 @@
-import uuid from "uuid/v4";
+import { v4 as uuidv4 } from 'uuid';
 
 // a little function to help us with reordering the result
 export const reorder = (list, startIndex, endIndex) => {
@@ -27,7 +27,7 @@ export const copy = (
     }
   }
 
-  destClone.splice(droppableDestination.index, 0, { ...item, id: uuid() });
+  destClone.splice(droppableDestination.index, 0, { ...item, id: uuidv4() });
   return destClone;
 };
 

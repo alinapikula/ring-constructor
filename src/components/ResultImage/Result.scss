@@ -8,14 +8,18 @@
 }
 
 .result{
-height: 40rem;
-width: 30rem;
+height: 45rem;
+width: 35rem;
 background-color: $primary-2;
-margin-top: 3rem;
+margin-top: 2rem;
+
 display: flex;
 flex-direction: column;
 place-content: center;
+border-top-left-radius: 20px;
+border-bottom-left-radius: 20px;
         &__container {
+            
             margin: auto;
             height: 360px;
             width: 360px;
@@ -23,10 +27,11 @@ place-content: center;
             text-align: center;
             }
             &__btn {
+                width: 15rem;
                 background-color: $primary-1;
                 color: $bege;
                 border: none;
-        
+                margin: 0 auto;
                 padding: 0.5rem;
                 border-radius: 10px;
                 height: 2.5rem;
