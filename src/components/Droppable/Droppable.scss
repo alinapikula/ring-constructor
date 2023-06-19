@@ -1,20 +1,9 @@
-// nutral colors 
-$black: #323232;
-$silver: #AFAFAF;
-$white: #FFFFFF;
-$dark-black: #000000;
-$mercury: #E1E1E1;
-$alabaser: #FAFAFA;
-$bege: #FBF7F7;
-
-// primary collors
-$primary-1: #3E2E3C;
-$primary-2: #EDE7E4;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
 .drop{
@@ -23,26 +12,30 @@ $primary-2: #EDE7E4;
                 display: flex;
                 flex-direction: column;
                 place-content: center;
+                margin-top: 3rem;
             }
-        
+           &__title{
+            text-align: center;
+           }
             &__container {
-                width: 100%;
-                height: 5rem;
+                width: 20rem;
+                height: 30rem;
         
-                margin-bottom: 4rem;
+                margin-top: 2rem;
                 border: 2px dashed $silver;
         
                 border-radius: 25px;
                 background-color: $mercury;
             }
-            &__btn {
-                background-color: $primary-1;
-                color: $bege;
-                border: none;
 
-                padding: 0.5rem;
-                border-radius: 10px;
-                height: 2.5rem;
-                margin-bottom: 2rem;
-            }
+                &__btn {
+                    background-color: $primary-1;
+                    color: $bege;
+                    border: none;
+
+                    padding: 0.5rem;
+                    border-radius: 10px;
+                    height: 2.5rem;
+                    margin-top: 2rem;
+                }
 }

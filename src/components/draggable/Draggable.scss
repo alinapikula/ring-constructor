@@ -1,34 +1,23 @@
-// nutral colors 
-$black: #323232;
-$silver: #AFAFAF;
-$white: #FFFFFF;
-$dark-black: #000000;
-$mercury: #E1E1E1;
-$alabaser: #FAFAFA;
-$bege: #FBF7F7;
-
-// primary collors
-$primary-1: #3E2E3C;
-$primary-2: #EDE7E4;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Josefin Sans', sans-serif;
 }
 
-.main {
+.draggable {
     // height: calc(100vh - 5rem);
     // background-color: $bege;
     // display: flex;
     // justify-content: space-around;
 
-    &__choose-rows {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+    &__rows {
+        margin-top: 3rem;
+        margin-left: 5rem;
 
         background-color: $primary-2;
-        width: 100%;
+        width: 24rem;
         display: flex;
         flex-direction: column;
         border-radius: 20px;
@@ -36,25 +25,28 @@ $primary-2: #EDE7E4;
 
     }
 
-    &__choose-title {
+    &__title {
         text-align: center;
-
         margin: 1rem;
         margin-top: 2rem;
         font-size: 1.25rem;
     }
 
-    &__choose-devider {
+    &__devider {
         margin: 1rem auto;
-        height: 3px;
+        height: 1px;
         width: 90%;
-
         background-color: $primary-1;
     }
 }
 
 .row-img{
-    width: 250px;
+    margin: 0 1rem;
+    width: 22rem;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    
 }
 
 .drg-ul{

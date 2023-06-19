@@ -3,21 +3,33 @@ import {DragDropContext, Draggable} from "react-beautiful-dnd"
 import { StrictModeDroppable as Droppable } from "../../helpers/StrictModeDroppable";
 
 
-function DraggableComp(props) {
-  console.log(props);
+const DraggableComp = ({data})=> {
+
+    const onDragEnd = (result) => {
+        const { source, destination } = result;
+        // dropped outside the list
+        if (!destination) {
+            return;
+        }
+        if (source.droppableId === destination.droppableId && source.index === destination.index)
+        return
+      }
+      
+
+
   return (
-    <div className="Draggable">
-         <div className="main__choose-rows">
-            <h4 className="main__choose-title">
-                Coose your rows
-            </h4>
-            <div className="main__choose-devider"></div>
-            <DragDropContext>
+    <div className="draggable">
+         <div className="draggable__rows">
+            <h2 className="draggable__title">
+                Choose your rows
+            </h2>
+            <div className="draggable__devider"></div>
+            <DragDropContext onDragEnd={onDragEnd} >
             <Droppable droppableId="rows">
               {(providedDrop)=>(
                 
             <ul className="drg-ul" {...providedDrop.droppableProps} {...providedDrop.dragHandleProps} ref={providedDrop.innerRef}>
-            {props.data.map((item, index)=>{
+            {data.map((item, index)=>{
               return(
             <Draggable key={item.id} draggableId={item.id} index={index}>
               {(provided)=>(

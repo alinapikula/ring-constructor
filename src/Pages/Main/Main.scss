@@ -1,24 +1,13 @@
-// nutral colors 
-$black: #323232;
-$silver: #AFAFAF;
-$white: #FFFFFF;
-$dark-black: #000000;
-$mercury: #E1E1E1;
-$alabaser: #FAFAFA;
-$bege: #FBF7F7;
-
-// primary collors
-$primary-1: #3E2E3C;
-$primary-2: #EDE7E4;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
 
 * {
     margin: 0;
-    padding: 0;
-    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;   
 }
 
 .main {
-    height: calc(100vh - 5rem);
+    height: calc(100% - 5rem);
     background-color: $bege;
     display: flex;
-    justify-content: space-around;}
+    justify-content: space-between;}

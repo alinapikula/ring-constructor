@@ -3,12 +3,9 @@ import "./Result.scss"
 function Result() {
   return (
     <div className="result">
-    <div className="main__result">
-            <div className="main__result-container"></div>
-            <button className="main__btn main__drop-btn">SAVE</button>
-            <button className="main__btn main__drop-btn">CLEAR</button>
-
-        </div>
+            <div className="result__container"></div>
+            <button className="result__btn result__btn--save">SAVE</button>
+            <button className="result__btn result__btn--clear">CLEAR</button> 
     </div>
   );
 }
