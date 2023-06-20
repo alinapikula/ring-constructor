@@ -1,4 +1,3 @@
-import { Component } from "react";
 import React from "react";
 import "./RowList.scss"
 import CustomScroller from "react-custom-scroller";
@@ -7,15 +6,6 @@ import { StrictModeDroppable as Droppable } from "../../helpers/StrictModeDroppa
 import { ITEMS } from "../../assets/initData";
 
 export const RowList = () => {
-
-  // export class CustomScrollBar extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     items: getItems(100)
-  //   };
-  //   this.onDragEnd = this.onDragEnd.bind(this);
-  // }}
 
   return (
     <CustomScroller className="row-list">

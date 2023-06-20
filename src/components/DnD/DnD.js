@@ -18,15 +18,15 @@ class DnD extends Component {
       return;
     }
     switch (source.droppableId) {
-      case destination.droppableId:
-        this.setState({
-          [destination.droppableId]: reorder(
-            this.state[source.droppableId],
-            source.index,
-            destination.index
-          )
-        });
-        break;
+      // case destination.droppableId:
+      //   this.setState({
+      //     [destination.droppableId]: reorder(
+      //       this.state[source.droppableId],
+      //       source.index,
+      //       destination.index
+      //     )
+      //   });
+      //   break;
       case "ITEMS":
         this.setState({
           [destination.droppableId]: copy(
@@ -82,14 +82,14 @@ class DnD extends Component {
                                 style={provided.draggableProps.style}
                               >
                                 <img className="dnd__row-img" src={item.content}/> 
-                                <button
+                                <button className="dnd__btn-del"
                                   onClick={() => {
                                     const newState = { ...this.state };
                                     newState[list].splice(index, 1);
                                     this.setState(newState);
                                   }}
                                 >
-                                  X
+                                  x
                                 </button>
                               </div>
                             )}

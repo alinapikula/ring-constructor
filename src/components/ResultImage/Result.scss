@@ -12,7 +12,6 @@ height: 45rem;
 width: 35rem;
 background-color: $primary-2;
 margin-top: 2rem;
-
 display: flex;
 flex-direction: column;
 place-content: center;
@@ -26,6 +25,12 @@ border-bottom-left-radius: 20px;
             background-color: $mercury;
             text-align: center;
             }
+        &__placeholder{
+            padding: 1rem;
+            color: $silver;
+            font-size: 3.5rem;
+            text-align: left;
+        }    
             &__btn {
                 width: 15rem;
                 background-color: $primary-1;

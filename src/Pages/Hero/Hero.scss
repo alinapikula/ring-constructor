@@ -1,0 +1,15 @@
+.hero{
+    &__title{
+        font-size: 3rem;
+        width: 30rem;
+        
+    }
+    &__canvas{
+        position: relative;
+        left: 20rem;
+        
+        width: 40rem;
+        height: 40rem;
+        margin-bottom: 5rem;
+    }
+}

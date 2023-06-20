@@ -1,6 +1,5 @@
 import Result from "../../components/ResultImage/Result";
 import DnD from "../../components/DnD/DnD";
-
 import "./Main.scss"
 
 function Main() {
