@@ -11,7 +11,7 @@ export const RowList = () => {
     <CustomScroller className="row-list">
     <div className="row-list">
       <h1 className="row-list__title">Drag your rows</h1>
-      <Droppable droppableId="ITEMS" isDropDisabled={true}>
+      <Droppable droppableId="items" isDropDisabled={true}>
         {(provided, snapshot) => (
           <ul className="row-list__list"
             ref={provided.innerRef}

@@ -1,15 +1,46 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .hero{
-    &__title{
+    height: calc(100vh - 6rem);
+    background-color:$primary-2;
+    &__container{
+        position: relative;
+        left: 10%;
+        top: 20%;
+    }
+    &__title{ 
+        font-weight: 500;
         font-size: 3rem;
-        width: 30rem;
+        line-height: 4rem;
+        width: 50rem;
+        padding-bottom: 3rem;
+        &--spn{
+            color: $primary-3;
+        }
         
     }
     &__canvas{
         position: relative;
-        left: 20rem;
-        
+        left: 30rem; 
         width: 40rem;
         height: 40rem;
         margin-bottom: 5rem;
+    }
+    &__btn {
+        width: 15rem;
+        background-color: $primary-1;
+        color: $bege;
+        border: none;
+        margin: 0 auto;
+        padding: 0.5rem;
+        border-radius: 10px;
+        height: 2.5rem;
+        margin-bottom: 2rem;
     }
 }

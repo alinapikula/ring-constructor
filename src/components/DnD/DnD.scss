@@ -19,6 +19,15 @@
     text-align: center;
     padding: 1rem;
 }
+&__container-drop{
+    background-color: white;
+    padding: 1rem 1rem 0;
+    border-radius: 15px; 
+    height: 7rem;
+     width: 25rem;
+     margin-bottom: 3rem;
+     border: 1px dashed $primary-1;
+}
 &__row-img{
     border-radius: 15px;
     width: 25rem;

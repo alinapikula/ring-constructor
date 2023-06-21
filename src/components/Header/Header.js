@@ -8,7 +8,7 @@ const Header = () => {
     <img className="header__logo" src={logo}/>
     </Link>
      <nav className="header__nav">
-        <p>Login</p>
+        <Link to={"/login"} className="header__nav-link">Login</Link>
         <p>Sign Up</p>
     </nav>
     </div> 
