@@ -9,27 +9,7 @@ import { RowList } from "../RowList/RowList";
 
 
 const DnD = ({state, setState}) => {
-  // state = initState;
-
-// const List = styled.div`
-//   border: 1px ${props => (props.isDraggingOver ? "dashed #000" : "solid #ddd")};
-//   background-color: white;
-//   padding: 1rem 1rem 0;
-//   border-radius: 15px;
-//   font-family: sans-serif;
-//   height: 20rem;
-//   width: 30rem;
-  
-// `;
-//  const CategoryList = styled(List)`
-  
-//   width: 25rem;
-//    height: 7rem;
-//    margin-bottom: 3rem;
-// `;
-
-
-
+ 
   const onDragEnd = result => {
     const { source, destination } = result;
     // dropped outside the list
@@ -37,37 +17,38 @@ const DnD = ({state, setState}) => {
       return;
     }
     switch (source.droppableId) {
-      // case destination.droppableId:
-      //   this.setState({
-      //     [destination.droppableId]: reorder(
-      //       this.state[source.droppableId],
-      //       source.index,
-      //       destination.index
-      //     )
-      //   });
-      //   break;
       case "items":
-        setState({
+          setState(prev =>{
+          if(prev[destination.droppableId].length === 0){
+            return {...prev, 
           [destination.droppableId]: copy(
             ITEMS,
             state[destination.droppableId],
             source,
             destination
-          ),
-          "row2": [],
-          "row3": [],
-        });
-        break;
-      default:
-        setState(
-          move(
-            state[source.droppableId],
-            state[destination.droppableId],
-            source,
-            destination
           )
+        }}
+          return prev
+          }
+          // {...state,
+          // [destination.droppableId]: copy(
+          //   ITEMS,
+          //   state[destination.droppableId],
+          //   source,
+          //   destination
+          // )}
         );
         break;
+      // default:
+      //   setState(
+      //     move(
+      //       state[source.droppableId],
+      //       state[destination.droppableId],
+      //       source,
+      //       destination
+      //     )
+      //   );
+      //   break;
     }
   };
 

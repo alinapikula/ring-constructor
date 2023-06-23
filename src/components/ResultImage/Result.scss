@@ -18,19 +18,43 @@ place-content: center;
 border-top-left-radius: 20px;
 border-bottom-left-radius: 20px;
         &__container {
-            
             margin: auto;
             height: 360px;
             width: 360px;
             background-color: $mercury;
             text-align: center;
+            &--rslt{
+                
+                background-color: white;
+            }
             }
         &__placeholder{
             padding: 1rem;
             color: $silver;
             font-size: 3.5rem;
             text-align: left;
-        }    
+        } 
+        &__img{
+        position: relative;
+        height: 360px;
+        width: 360px;
+        &--pos1{
+        z-index: 4;
+        }
+        &--pos2{
+        z-index: 3;
+        top: -360px;
+        }
+        &--pos3{
+        z-index: 2;
+        top: -720px;
+        }
+        &--shank{
+        z-index: 1;
+        top: -1080px;
+        }
+        } 
+
             &__btn {
                 width: 15rem;
                 background-color: $primary-1;
@@ -41,5 +65,11 @@ border-bottom-left-radius: 20px;
                 border-radius: 10px;
                 height: 2.5rem;
                 margin-bottom: 2rem;
+
+                &--out{
+                    position: relative;
+                    left: -28rem;
+                    top: -3rem;
+                }
             }
 }
