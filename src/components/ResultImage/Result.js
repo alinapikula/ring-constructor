@@ -69,7 +69,7 @@ if (gen){
               <img className="result__img result__img--shank" src={Shank}/> 
             </div>
             <button className="result__btn result__btn--save">SAVE</button>
-            <button className="result__btn result__btn--clear">CLEAR</button> 
+            <button className="result__btn result__btn--clear" onClick={()=>{setGen(false)}}>CLEAR</button> 
             </div>
 
             <button className="result__btn result__btn--out" onClick={(e)=>{handleGenerate(e)}} >GENERATE</button>

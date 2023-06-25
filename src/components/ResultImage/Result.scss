@@ -35,7 +35,8 @@ border-bottom-left-radius: 20px;
             text-align: left;
         } 
         &__img{
-        position: relative;
+        position: absolute;
+        right: 5%;
         height: 360px;
         width: 360px;
         &--pos1{
@@ -43,15 +44,15 @@ border-bottom-left-radius: 20px;
         }
         &--pos2{
         z-index: 3;
-        top: -360px;
+        // top: -360px;
         }
         &--pos3{
         z-index: 2;
-        top: -720px;
+        // top: -720px;
         }
         &--shank{
         z-index: 1;
-        top: -1080px;
+        // top: -1080px;
         }
         } 
 

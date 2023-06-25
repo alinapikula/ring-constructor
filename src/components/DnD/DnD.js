@@ -3,7 +3,7 @@ import "./DnD.scss"
 import { DragDropContext, Draggable } from "react-beautiful-dnd";
 import { StrictModeDroppable as Droppable } from "../../helpers/StrictModeDroppable";
 import { ITEMS } from "../../assets/initData";
-import { reorder, copy, move } from "../../helpers/utils";
+import { copy } from "../../helpers/utils";
 import { RowList } from "../RowList/RowList";
 
 
@@ -30,25 +30,9 @@ const DnD = ({state, setState}) => {
         }}
           return prev
           }
-          // {...state,
-          // [destination.droppableId]: copy(
-          //   ITEMS,
-          //   state[destination.droppableId],
-          //   source,
-          //   destination
-          // )}
         );
         break;
-      // default:
-      //   setState(
-      //     move(
-      //       state[source.droppableId],
-      //       state[destination.droppableId],
-      //       source,
-      //       destination
-      //     )
-      //   );
-      //   break;
+     
     }
   };
 
@@ -105,12 +89,15 @@ const DnD = ({state, setState}) => {
             </div>
           </DragDropContext>
         <div>
-          <button
+          <button className="dnd__btn"
             onClick={() => {
-              setState(state);
+              setState({ 
+              ["row1"]: [],
+              ["row2"]: [],
+              ["row3"]: []});
             }}
           >
-            Reset
+            RESET ROWS
           </button>
         </div>
       </div>

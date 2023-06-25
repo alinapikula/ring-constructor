@@ -7,32 +7,54 @@
 }
 
 .hero{
-    height: calc(100vh - 6rem);
+    height: calc(100vh - 9rem);
     background-color:$primary-2;
+    
     &__container{
-        position: relative;
-        left: 10%;
-        top: 20%;
+        z-index: 1;
+        text-align: center;
+    @include tablet {
+       text-align: left;
+       position: absolute;  
+       top: 20%;  
+       left: 5%; 
+            
+        }
     }
     &__title{ 
         font-weight: 500;
-        font-size: 3rem;
-        line-height: 4rem;
-        width: 50rem;
-        padding-bottom: 3rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        width: 20rem;
+        text-align: left;
+        padding: 2rem;
+        padding-left: 4rem;
         &--spn{
             color: $primary-3;
         }
+        @include tablet{
+        padding-left: 0;
+        font-size: 3rem;
+        line-height: 4rem;
+        width: 40rem;
+        padding-bottom: 3rem;
+        }
         
     }
+    
     &__canvas{
-        position: relative;
-        left: 30rem; 
-        width: 40rem;
-        height: 40rem;
-        margin-bottom: 5rem;
+        width: 100%;
+        height: 25rem;
+       @include tablet{
+        padding-top: 5rem;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 35rem;
+       }
     }
     &__btn {
+        cursor: pointer;
         width: 15rem;
         background-color: $primary-1;
         color: $bege;
@@ -42,5 +64,12 @@
         border-radius: 10px;
         height: 2.5rem;
         margin-bottom: 2rem;
+    }
+    &__btn:hover{
+    
+    transform: scale(1.1);
+    color: $primary-1;
+    background-color: $primary-2;
+    border: 2px solid $primary-1;
     }
 }

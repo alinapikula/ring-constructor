@@ -1,0 +1,52 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.footer{
+   color: $silver;
+   display: flex;
+   flex-direction: column;
+   place-items: center;
+    height: 3.75rem;
+    background-color: $primary-2;
+   &__title{
+    font-weight: 400;
+    letter-spacing: 0.25rem;
+   }
+   &__sm{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    
+    @include tablet{
+    width: 70rem;
+    }
+   }
+   &__sm-link{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+   }
+   &__sm-logo{
+   margin-left: 0.25rem; 
+    height: 1.5rem;
+    filter: invert(83%) sepia(8%) saturate(12%) hue-rotate(45deg) brightness(83%) contrast(95%);;
+   }
+   &__sm-logo-art{
+   margin-left: 0.25rem; 
+    height: 1.5rem;
+   
+   }
+
+   &__sm-text{
+    font-weight: 500;
+    color: $silver;
+   }
+
+}

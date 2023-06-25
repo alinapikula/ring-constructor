@@ -8,14 +8,9 @@ import "./Hero.scss"
 const Hero = () => {
     return ( 
         <section className="hero">
-            {/* <Canvas className="hero__canvas-1" shadows camera={{position: [12,12,5]}}>
-            <Environment preset="forest"/>
-            <Model1/>
-            <ContactShadows position={[0, 0.8, 0]} color="#ffffff"/>
-            <OrbitControls autoRotate/>
-            </Canvas> */}
+            
             <div className="hero__container">
-            <h1 className="hero__title">Build {<span className="hero__title--spn">UNIQUE</span>} ring style to match your amazing personality</h1>
+            <h1 className="hero__title">Build a {<span className="hero__title--spn">UNIQUE</span>} ring style to match your amazing personality</h1>
             <Link to={"/main"}>
             <button className="hero__btn"> Get started</button>
             </Link>

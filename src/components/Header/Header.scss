@@ -16,19 +16,43 @@
     border-bottom: #EF9002 5px solid;
     align-items: center;
     justify-content: space-between;
+    
 
-    &__logo{
-        margin-left: 140%;
-        height: 3.5rem;
+    &__logo{ 
+        height: 4rem;
+        padding-left: 3rem;
+        padding-top: 0.5rem;
+        &--long{
+            display: none;
+        }
+        @include desktop{
+        
+         &--long{
+            margin-left: 130%;
+            height: 3.5rem;
+            // margin-top: 4rem;
+            display: inline-block;
+
+         }
+         &--short{
+            display: none;
+         }
+        }
     }
     &__nav{
-        width: 15rem;
-        margin-right: 2rem;
-        display: flex;
-        color: #E1E1E1;
-        justify-content: space-around;
+       
+            margin-right: 2rem;
+            display: flex;
+            color: #E1E1E1;
+            justify-content: space-around;
+        @include tablet{
+            width: 15rem;
+        }
+      
     }
     &__nav-link{
+        font-weight: 400;
+        padding-right: 2rem;
         color: white;
         text-decoration: none;
     }
