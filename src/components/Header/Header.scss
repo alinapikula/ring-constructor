@@ -51,9 +51,14 @@
       
     }
     &__nav-link{
-        font-weight: 400;
+        font-weight: 300;
         padding-right: 2rem;
-        color: white;
+        color: $primary-2;
         text-decoration: none;
     }
+    &__nav-link:hover{
+        font-weight: 400;
+        color: white;
+    }
+   
 }

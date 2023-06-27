@@ -69,7 +69,7 @@ if (gen){
               <img className="result__img result__img--pos3" src={resImg[2]}/>
               <img className="result__img result__img--shank" src={Shank}/> 
             </div>
-            <Link to={"/maitenance"}><button className="result__btn result__btn--save">SAVE</button></Link>
+            <Link className="result__btn--link" to={"/maitenance"}><button className="result__btn result__btn--save">SAVE</button></Link>
             <button className="result__btn result__btn--clear" onClick={()=>{setGen(false)}}>CLEAR</button> 
             </div>
 

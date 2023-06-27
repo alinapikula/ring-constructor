@@ -5,10 +5,18 @@
     margin: 0;
     padding: 0;
 }
+@keyframes truck{
+   0%{
+    transform: translateX(0px);
+   } 
+   0%{
+    transform: translateX(-90px);
+   } 
+}
 
 .mait {
     width: 99vw;
-    height: calc(100vh - 9.2rem);
+    height: calc(100vh - 10rem);
     background-image: url("../../assets/backgrounds/Group\ 21.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -31,9 +39,13 @@
     &__title{
         width: 18rem;
         text-align: center;
+        margin-bottom: 2rem;
     }
     &__img{
+        animation-name: truck;
+        animation-duration: 3s;
         height: 10rem;
+        filter: invert(83%) sepia(8%) saturate(12%) hue-rotate(45deg) brightness(70%) contrast(95%);
     }
     &__btn{
         width: 12rem;
@@ -47,4 +59,11 @@
             margin-top: 3rem;
             
     }
+                &__btn:hover {
+                    transition: ease-in 0.3s;
+                    transform: scale(1.1);
+                    color: $primary-1;
+                    background-color: $primary-2;
+                    border: 2px solid $primary-1;
+                }
 }

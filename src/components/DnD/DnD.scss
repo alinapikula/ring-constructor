@@ -70,6 +70,7 @@ width: 60%;
         }
 }
 &__btn{
+    cursor: pointer;
         width: 10rem;
         background-color: $primary-1;
         color: $bege;
@@ -84,9 +85,14 @@ width: 60%;
         }
         @include desktop{
         margin-top: -1rem;
-        }
-        
+        }        
 }
+        &__btn:hover {
+            transition: ease-in 0.3s;
+            color: $primary-1;
+            background-color: $primary-2;
+            border: 2px solid $primary-1;
+        }
 &__btn-del{
     position: relative;
     left: 0.5rem;

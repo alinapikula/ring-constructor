@@ -8,7 +8,7 @@
 
 .login{
     width: 99vw;
-    height: calc(100vh - 9.2rem);
+    height: calc(100vh - 10rem);
     background-image: url("../../assets/backgrounds/Group\ 21.png"); 
     background-repeat: no-repeat;
     background-position: center center;
@@ -61,6 +61,14 @@
         height: 2.5rem;
         margin:  auto 2rem;
 } 
+ &__btn:hover {
+
+     transform: scale(1.1);
+    transition: ease-in 0.3s;
+     color: $primary-1;
+     background-color: $primary-2;
+     border: 2px solid $primary-1;
+ }
 }
 
 

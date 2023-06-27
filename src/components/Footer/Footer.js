@@ -17,7 +17,7 @@ const Footer = () => {
             <li className="footer__single-sm">
                 <a className="footer__sm-link" href="https://www.artstation.com/endless_nothing/profile" >
                 <p className="footer__sm-text">See my designs</p>
-                <img className=" footer__sm-logo-art" src={artLogo}/>
+                <img className="footer__sm-logo-art" src={artLogo}/>
                 </a>
             </li>
             <li className="footer__single-sm">
