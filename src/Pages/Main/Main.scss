@@ -7,11 +7,16 @@
 }
 
 .main {
-    height: calc(100vh - 8.5rem);
+height: 123vh;
     background-color: $bege;
     display: flex;
     flex-direction: column;
 @include tablet{
+height: 137vh;
+
+}
+@include desktop{
+height: calc(100vh - 10rem);
 flex-direction: row;
 justify-content: space-between;
 }}

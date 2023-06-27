@@ -17,3 +17,15 @@
   border-radius: 5px solid black;
 }
 
+@mixin btn{
+  width: 15rem;
+    background-color: $primary-1;
+    color: $bege;
+    border: none;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border-radius: 10px;
+    height: 2.5rem;
+    
+}
+

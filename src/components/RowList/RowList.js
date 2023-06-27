@@ -8,11 +8,12 @@ import { ITEMS } from "../../assets/initData";
 export const RowList = () => {
 
   return (
-    <CustomScroller className="row-list">
+    
     <div className="row-list">
       <h1 className="row-list__title">Drag your rows</h1>
       <Droppable droppableId="items" isDropDisabled={true}>
         {(provided, snapshot) => (
+          <CustomScroller className="row-list">
           <ul className="row-list__list"
             ref={provided.innerRef}
             isDraggingOver={snapshot.isDraggingOver}
@@ -38,9 +39,10 @@ export const RowList = () => {
             ))}
             {provided.placeholder}
           </ul>
+          </CustomScroller>
         )}
       </Droppable>
     </div>
-    </CustomScroller>
+    
   );
 };

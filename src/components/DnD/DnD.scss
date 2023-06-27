@@ -7,43 +7,85 @@
 }
 
 .dnd{
-    margin-top: 3rem;
-    width: 70%;
-  
+margin-top: 2rem;
+// width: 100vw;
+
+@include tablet{
+margin-top: 3rem;
+}
+@include desktop{
+width: 60%;
+}
 &__container{
+    
     display: flex;
-    justify-content: space-around;
-    margin-right: 4rem;
+    justify-content: space-between;  
+    margin:  0 10%;
+    @include tablet {
+    
+    }
+    @include desktop {
+        // justify-content: space-around;
+    //     margin-left: 2rem;
+    column-gap: 15%;
+    // margin-right: 10%;
+    }
 }
 &__title{
     text-align: center;
+    padding:  1rem 0;
+    font-size: 1.5rem;
+    @include tablet{
     padding: 1rem;
+    font-size: 2rem;
+    }
 }
 &__container-drop{
     background-color: white;
     padding: 1rem 1rem 0;
     border-radius: 15px; 
-    height: 7rem;
-     width: 25rem;
+    height: 3rem;
+    width: 8rem;
+    
      margin-bottom: 3rem;
      border: 1px dashed $primary-1;
+     @include tablet{
+    height: 5rem;
+    width: 19rem;
+     }
+     @include desktop{
+    width: 23rem;
+    height: 7rem;
+     }
 }
 &__row-img{
     border-radius: 15px;
-    width: 25rem;
+    width: 9rem;
+    @include tablet {
+            width: 18rem;
+        }
+    
+        @include desktop {
+            width: 23rem;
+        }
 }
 &__btn{
-    // position: absolute;
-    // top: 82.5vh;
-        width: 15rem;
+        width: 10rem;
         background-color: $primary-1;
         color: $bege;
         border: none;
-        margin-left: 10.5rem;
         padding: 0.5rem;
         border-radius: 10px;
         height: 2.5rem;
-        // margin-bottom: 4rem;
+        margin-left: 17%;
+        @include tablet{
+       
+        width: 15rem;
+        }
+        @include desktop{
+        margin-top: -1rem;
+        }
+        
 }
 &__btn-del{
     position: relative;

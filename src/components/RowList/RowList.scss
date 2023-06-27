@@ -8,26 +8,48 @@
 
 .row-list{
     border-radius: 20px;
-    height: 34.5rem;
+    height: 20rem;
     background-color: $primary-2;
+    @include tablet{
+    height: 25rem;
+    }
+    @include desktop{
+    height: 31.5rem;
+    }
     &__title{
-       
+        font-size: 1.5rem;
         padding-top: 1rem;
         text-align: center;
+        @include tablet{
+        font-size: 2rem;
+        }
     }
     &__list{
-        
-        width: 30rem;
-
+        width: 12.5rem;
+        @include tablet{
+        width: 20rem;
+     }
+        @include desktop{
+        width: 27rem;
+     }
     }
     &__row{
         text-align: center;
+        padding: 0.75rem;
+        @include desktop{
         padding: 2rem;
+        }
         
     }
     &__row-img{
         border-radius: 15px;
-        width: 25rem;
+        width: 12rem;
+        @include tablet {
+            width: 20rem;
+        }
+        @include desktop {
+            width: 23rem;
+        }
 
     }
 }

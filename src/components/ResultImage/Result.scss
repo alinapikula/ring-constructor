@@ -8,23 +8,26 @@
 }
 
 .result{
-height: 40rem;
-width: 35rem;
+// width: 100vw;
 background-color: $primary-2;
 margin-top: 2rem;
 display: flex;
 flex-direction: column;
 place-content: center;
+
+@include desktop{
+height: 40rem;
+width: 33rem;
 border-top-left-radius: 20px;
 border-bottom-left-radius: 20px;
+}
         &__container {
-            margin: auto;
+            margin: 1.5rem auto;
             height: 360px;
             width: 360px;
             background-color: $mercury;
             text-align: center;
             &--rslt{
-                
                 background-color: white;
             }
             }
@@ -36,28 +39,33 @@ border-bottom-left-radius: 20px;
         } 
         &__img{
         position: absolute;
-        right: 5%;
+        // right: 5%;
         height: 360px;
         width: 360px;
+        right: calc(50% - 180px);
+        @include tablet{
+        
+        }
+        @include desktop{
+            right: 5%;
+
+        }
         &--pos1{
         z-index: 4;
         }
         &--pos2{
         z-index: 3;
-        // top: -360px;
         }
         &--pos3{
         z-index: 2;
-        // top: -720px;
         }
         &--shank{
         z-index: 1;
-        // top: -1080px;
         }
         } 
 
             &__btn {
-                width: 15rem;
+                width: 10rem;
                 background-color: $primary-1;
                 color: $bege;
                 border: none;
@@ -66,11 +74,21 @@ border-bottom-left-radius: 20px;
                 border-radius: 10px;
                 height: 2.5rem;
                 margin-bottom: 2rem;
+                @include tablet{
+                width: 15rem;
+                }
+               
 
                 &--out{
+                position: relative;
+                top: -39rem;
+                left: 60%;
+                
+                    @include desktop{
                     position: relative;
-                    left: -28rem;
-                    top: -3rem;
+                        left: calc(-60% - 7.5rem);
+                        top: -2.4rem;
+                    }
                 }
             }
 }

@@ -1,0 +1,50 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mait {
+    width: 99vw;
+    height: calc(100vh - 9.2rem);
+    background-image: url("../../assets/backgrounds/Group\ 21.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: $bege;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__container {
+        height: 25rem;
+        background-color: $primary-2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 20rem;
+        border-radius: 20px;
+    }
+    &__title{
+        width: 18rem;
+        text-align: center;
+    }
+    &__img{
+        height: 10rem;
+    }
+    &__btn{
+        width: 12rem;
+            background-color: $primary-1;
+            color: $bege;
+            border: none;
+            margin: 0 auto;
+            padding: 0.5rem;
+            border-radius: 10px;
+            height: 2.5rem;
+            margin-top: 3rem;
+            
+    }
+}

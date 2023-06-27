@@ -1,6 +1,7 @@
 import "./Result.scss"
 import { res_pos1, res_pos2, res_pos3 } from "../../assets/initData";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Shank from "../../assets/rows-dnd/bottom.png"
 
 function Result({state}) {
@@ -68,7 +69,7 @@ if (gen){
               <img className="result__img result__img--pos3" src={resImg[2]}/>
               <img className="result__img result__img--shank" src={Shank}/> 
             </div>
-            <button className="result__btn result__btn--save">SAVE</button>
+            <Link to={"/maitenance"}><button className="result__btn result__btn--save">SAVE</button></Link>
             <button className="result__btn result__btn--clear" onClick={()=>{setGen(false)}}>CLEAR</button> 
             </div>
 
