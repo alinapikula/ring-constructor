@@ -8,7 +8,7 @@
 
 .row-list{
     border-radius: 20px;
-    height: 20rem;
+    height: 17rem;
     background-color: $primary-2;
     @include tablet{
     height: 25rem;
@@ -17,7 +17,7 @@
     height: 31.5rem;
     }
     &__title{
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         padding-top: 1rem;
         text-align: center;
         @include tablet{
@@ -25,7 +25,7 @@
         }
     }
     &__list{
-        width: 12.5rem;
+        width: 10.5rem;
         @include tablet{
         width: 20rem;
      }
@@ -43,7 +43,7 @@
     }
     &__row-img{
         border-radius: 15px;
-        width: 12rem;
+        width: 9rem;
         @include tablet {
             width: 20rem;
         }

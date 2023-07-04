@@ -8,6 +8,7 @@
 
 .hero{
     height: calc(100vh - 10rem);
+    width: 100vw;
     background-color:$primary-2;
     
     &__container{
@@ -25,10 +26,10 @@
         font-weight: 500;
         font-size: 2rem;
         line-height: 2.5rem;
-        width: 20rem;
+        width: 80%;
         text-align: left;
         padding: 2rem;
-        padding-left: 4rem;
+        // padding-left: 4rem;
         &--spn{
             color: $primary-3;
         }
@@ -43,7 +44,7 @@
     }
     
     &__canvas{
-        width: 100%;
+        width: 100vw;
         height: 25rem;
        @include tablet{
         padding-top: 5rem;
@@ -72,4 +73,4 @@
     background-color: $primary-2;
     border: 2px solid $primary-1;
     }
-}
+}  

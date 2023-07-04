@@ -7,12 +7,12 @@
 }
 
 .main {
-height: 123vh;
+height: 100%;
     background-color: $bege;
     display: flex;
     flex-direction: column;
 @include tablet{
-height: 137vh;
+height: 110%;
 
 }
 @include desktop{
