@@ -1,0 +1,79 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes truck {
+    0% {
+        transform: translateX(0px);
+    }
+
+    0% {
+        transform: translateX(-90px);
+    }
+}
+
+.test {
+    width: 99vw;
+    height: calc(100vh - 10rem);
+    background-image: url("../../assets/backgrounds/Group\ 21.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: $bege;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+&__img{
+    width: 100px;
+}
+    &__container {
+        height: 25rem;
+        background-color: $primary-2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 20rem;
+        border-radius: 20px;
+    }
+
+    &__title {
+        width: 18rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    // &__img {
+    //     animation-name: truck;
+    //     animation-duration: 3s;
+    //     height: 10rem;
+    //     filter: invert(83%) sepia(8%) saturate(12%) hue-rotate(45deg) brightness(70%) contrast(95%);
+    // }
+
+    &__btn {
+        width: 12rem;
+        background-color: $primary-1;
+        color: $bege;
+        border: none;
+        margin: 0 auto;
+        padding: 0.5rem;
+        border-radius: 10px;
+        height: 2.5rem;
+        margin-top: 3rem;
+
+    }
+
+    &__btn:hover {
+        transition: ease-in 0.3s;
+        transform: scale(1.1);
+        color: $primary-1;
+        background-color: $primary-2;
+        border: 2px solid $primary-1;
+    }
+
+
+}
