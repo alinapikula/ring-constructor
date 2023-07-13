@@ -5,8 +5,14 @@ import {  Draggable } from "react-beautiful-dnd";
 import { StrictModeDroppable as Droppable } from "../../helpers/StrictModeDroppable";
 import { ITEMS } from "../../assets/initData";
 
-export const RowList = () => {
+export const RowList = ({rowList}) => {
 
+if (!rowList) {
+return (
+    <h1>Loading...</h1>
+) 
+}
+console.log(rowList.map(item=> (item.row_id).toString()));
   return (
     
     <div className="row-list">
@@ -19,8 +25,10 @@ export const RowList = () => {
             isDraggingOver={snapshot.isDraggingOver}
           >
             
-            {ITEMS.map((item, index) => (
-              <Draggable key={item.id} draggableId={item.id} index={index}>
+            {rowList.map((item, index) => (
+              
+              <Draggable key={(item.row_id).toString()} draggableId={(item.row_id).toString()} index={index}>
+                
                 {(provided, snapshot) => (
                   <React.Fragment>
                     <div className="row-list__row"
@@ -30,9 +38,9 @@ export const RowList = () => {
                       isDragging={snapshot.isDragging}
                       style={provided.draggableProps.style}
                     >
-                     <img className="row-list__row-img" src={item.content}/> 
+                     <img className="row-list__row-img" src={item.row_img}/> 
                     </div>
-                    {snapshot.isDragging && <img className="row-list__row-img" src={item.content}/>}
+                    {snapshot.isDragging && <img className="row-list__row-img" src={item.row_img}/>}
                   </React.Fragment>
                 )}
               </Draggable>

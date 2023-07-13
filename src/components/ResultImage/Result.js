@@ -1,6 +1,6 @@
 import "./Result.scss"
 import { res_pos1, res_pos2, res_pos3 } from "../../assets/initData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Shank from "../../assets/rows-dnd/bottom.png"
 
@@ -46,13 +46,6 @@ for (let i = 0; i < res_pos3.length; i++) {
 }
 
 setGen(true)
-  // return <div>
-  
-  //   <img src=""/>
-  //   <img src=""/>
-  //   <img src=""/>
-  //   <img src=""/>
-  // </div>
 setResImg([img1, img2, img3])
 
 }

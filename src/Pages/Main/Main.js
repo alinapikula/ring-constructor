@@ -1,9 +1,13 @@
 import Result from "../../components/ResultImage/Result";
 import DnD from "../../components/DnD/DnD";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import "./Main.scss"
 
 function Main() {
+
+
+
 
   const [state, setState] = useState({ 
   ["row1"]: [],

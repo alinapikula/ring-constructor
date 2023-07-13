@@ -2,6 +2,8 @@ import React from "react";
 import "./DnD.scss"
 import { DragDropContext, Draggable } from "react-beautiful-dnd";
 import { StrictModeDroppable as Droppable } from "../../helpers/StrictModeDroppable";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { ITEMS } from "../../assets/initData";
 import { copy } from "../../helpers/utils";
 import { RowList } from "../RowList/RowList";
@@ -9,7 +11,20 @@ import { RowList } from "../RowList/RowList";
 
 
 const DnD = ({state, setState}) => {
- 
+ const [rowList, setRowList] = useState([])
+
+useEffect(()=>{
+    axios.get("http://localhost:8080/row-list")
+    .then((response) =>{
+        setRowList(response.data)
+    })
+    .catch(console.log("wooopsy"))
+},[])
+
+
+
+
+
   const onDragEnd = result => {
     const { source, destination } = result;
     // dropped outside the list
@@ -22,7 +37,7 @@ const DnD = ({state, setState}) => {
           if(prev[destination.droppableId].length === 0){
             return {...prev, 
           [destination.droppableId]: copy(
-            ITEMS,
+            rowList,
             state[destination.droppableId],
             source,
             destination
@@ -40,7 +55,7 @@ const DnD = ({state, setState}) => {
       <div className="dnd">
           <DragDropContext onDragEnd={onDragEnd}>
             <div className="dnd__container">
-            <RowList />
+            <RowList  rowList={rowList}/>
             <div className="dnd__drop">
               <h1 className="dnd__title">Drop chosen</h1>
               <div>
@@ -53,8 +68,8 @@ const DnD = ({state, setState}) => {
                       > 
                         {state[list].map((item, index) => (
                           <Draggable
-                            key={item.id}
-                            draggableId={item.id}
+                            key={(item.row_id).toString()}
+                            draggableId={(item.row_id).toString()}
                             index={index}
                           >
                             {(provided, snapshot) => (
@@ -65,7 +80,7 @@ const DnD = ({state, setState}) => {
                                 isDragging={snapshot.isDragging}
                                 style={provided.draggableProps.style}
                               >
-                                <img className="dnd__row-img" src={item.content}/> 
+                                <img className="dnd__row-img" src={item.row_img}/> 
                                 <button className="dnd__btn-del"
                                   onClick={() => {
                                     const newState = { ...state };

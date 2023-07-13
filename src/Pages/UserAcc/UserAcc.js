@@ -15,7 +15,7 @@ useEffect(()=>{
     })
     .catch(console.log("wooopsy"))
 },[])
-console.log(rowList);
+
 
 
 if (!rowList) {
