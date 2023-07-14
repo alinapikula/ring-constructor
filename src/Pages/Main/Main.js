@@ -10,9 +10,10 @@ function Main() {
 
 
   const [state, setState] = useState({ 
-  ["row1"]: [],
-  ["row2"]: [],
-  ["row3"]: []})
+  "row1": [],
+  "row2": [],
+  "row3": []})
+ 
   
   return (
     <div className="main">
